@@ -11,6 +11,11 @@
     "bump:minor": "npm run build && npm version minor && git push --tags origin master && npm publish",
     "bump:major": "npm run build && npm version major && git push --tags origin master && npm publish"
   },
+  "files": [
+    "README.md",
+    "lodash-arithmetic.js",
+    "lodash-arithmetic.min.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Boulangerie/lodash-arithmetic.git"
