@@ -21,4 +21,4 @@ before_script:
 
 after_script:
   - npm install coveralls
-  - cat ./reports/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - cat ./reports/lcov.info | ./node_modules/coveralls/bin/coveralls.js
