@@ -1,0 +1,46 @@
+{
+  "name": "lodash-arithmetic",
+  "version": "1.0.0",
+  "description": "Lodash mixins for arbitrary-precision arithmetic",
+  "main": "lodash-arithmetic.js",
+  "scripts": {
+    "build": "uglifyjs -o lodash-arithmetic.min.js lodash-arithmetic.js",
+    "test": "mocha lodash-arithmetic.spec.js && npm run cover",
+    "cover": "istanbul cover _mocha lodash-arithmetic.spec.js --dir reports --report lcovonly -x '**.spec.js'",
+    "bump": "npm run build && npm version patch && git push --tags origin master && npm publish",
+    "bump:minor": "npm run build && npm version minor && git push --tags origin master && npm publish",
+    "bump:major": "npm run build && npm version major && git push --tags origin master && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boulangerie/lodash-arithmetic.git"
+  },
+  "keywords": [
+    "lodash",
+    "mixins",
+    "arithmetic",
+    "maths",
+    "operations",
+    "float",
+    "decimal",
+    "number",
+    "precision",
+    "arbitrary",
+    "big"
+  ],
+  "author": "Yannick Galatol <yannick.galatol@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Boulangerie/lodash-arithmetic/issues"
+  },
+  "homepage": "https://github.com/Boulangerie/lodash-arithmetic",
+  "dependencies": {
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "uglify-js": "^2.7.5"
+  }
+}
